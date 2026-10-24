@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.*;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import java.util.List;
 
 public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
     private List<AppTile> apps;
