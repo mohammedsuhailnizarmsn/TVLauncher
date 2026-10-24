@@ -4,8 +4,6 @@ import android.view.*;
 import android.widget.*;
 import androidx.recyclerview.widget.*;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import java.util.List;
 
 public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
@@ -16,7 +14,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, ViewGroup holder) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_app, parent, false);
         return new ViewHolder(view);
     }
@@ -31,7 +29,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_MAIN, null);
             intent.addCategory(Intent.CATEGORY_LAUNCHER);
-            intent.setClassName(app.packageName, null); // simplified
+            intent.setClassName(app.packageName, null);
             holder.itemView.getContext().startActivity(intent);
         });
     }
