@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.applestyle.launcher.app-merged_res-25:/layout_activity_main.xml.flat",
+        "source": "com.applestyle.launcher.app-main-27:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/layout_item_dock_app.xml.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/layout/item_dock_app.xml"
+    },
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/drawable_dock_band_rounded.xml.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/drawable/dock_band_rounded.xml"
+    },
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/font_outfit.ttf.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/font/outfit.ttf"
+    },
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/drawable_pill_glass.xml.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/drawable/pill_glass.xml"
+    },
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/drawable_tile_selector.xml.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/drawable/tile_selector.xml"
+    },
+    {
+        "merged": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-merged_res-25:/layout_item_app.xml.flat",
+        "source": "/Users/suhailnizar/.gradle/daemon/7.5.1/com.applestyle.launcher.app-main-27:/layout/item_app.xml"
+    }
+]

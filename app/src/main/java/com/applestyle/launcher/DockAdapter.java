@@ -4,6 +4,7 @@ import android.view.*;
 import android.widget.*;
 import androidx.recyclerview.widget.*;
 import android.content.Intent;
+import java.util.List;
 
 public class DockAdapter extends RecyclerView.Adapter<DockAdapter.ViewHolder> {
     private List<AppTile> apps;

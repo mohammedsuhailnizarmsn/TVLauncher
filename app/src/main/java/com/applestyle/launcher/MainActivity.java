@@ -7,13 +7,13 @@ import android.widget.*;
 import androidx.recyclerview.widget.*;
 import java.util.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
     private RecyclerView rvApps, rvDock;
     private TextView tvClock, tvDate, tvGreeting, tvFocusedAppName;
     private AppAdapter appAdapter;
     private DockAdapter dockAdapter;
-    private int currentFocusedRow = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,6 @@ public class MainActivity extends Activity {
     }
 
     private void setupClock() {
-        // Implementation for real-time clock would go here
         tvClock.setText("8:42 PM");
         tvDate.setText("Friday, October 24");
         tvGreeting.setText("Good Evening");
@@ -41,8 +40,6 @@ public class MainActivity extends Activity {
 
     private void setupApps() {
         List<AppTile> apps = new ArrayList<>();
-        // Logic to fetch installed apps excluding self
-        // For now, dummy data
         apps.add(new AppTile("Netflix", "com.netflix.ninja"));
         apps.add(new AppTile("Apple TV", "com.apple.atve.amazon.appletv"));
         apps.add(new AppTile("Prime Video", "com.amazon.primevideo.android"));
@@ -71,7 +68,6 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // Custom deterministic D-pad logic
         switch (keyCode) {
             case KeyEvent.KEYCODE_DPAD_UP:
                 if (rvDock.isFocused()) {
