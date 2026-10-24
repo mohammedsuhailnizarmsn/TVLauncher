@@ -13,15 +13,24 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: set up JDK 11
+    - name: set up JDK 17
       uses: actions/setup-java@v4
       with:
-        java-version: '11'
+        java-version: '17'
         distribution: 'temurin'
         cache: gradle
 
-    - name: Build with Gradle
-      run: gradle assembleDebug
+    # We will use the Gradle wrapper specifically by downloading it 
+    # or letting the Action find it, but we MUST use the wrapper to 
+    # avoid the system's Gradle 9.8.1.
+    - name: Setup Gradle Wrapper
+      run: |
+        chmod +x gradlew || true
+        # If gradlew is missing, we'll try to use the system gradle to generate it
+        # but the most reliable way is to use the provided properties.
+        
+    - name: Build with Gradle Wrapper
+      run: ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
