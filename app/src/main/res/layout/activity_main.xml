@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black">
+
+    <!-- Top Bar: Clock and Greeting -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="40dp">
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good Evening"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp"
+                android:fontFamily="@font/outfit" />
+            <TextView
+                android:id="@+id/tv_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8:42 PM"
+                android:textColor="@color/text_primary"
+                android:textSize="64sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/outfit" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friday, October 24"
+                android:textColor="@color/text_secondary"
+                android:textSize="20sp"
+                android:fontFamily="@font/outfit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/btn_inputs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inputs"
+                android:background="@drawable/pill_glass"
+                android:textColor="@color/text_primary"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginRight="10dp" />
+            <Button
+                android:id="@+id btn_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wi-Fi"
+                android:background="@drawable/pill_glass"
+                android:textColor="@color/text_primary"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginRight="10dp" />
+            <Button
+                android:id="@+id/btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:background="@drawable/pill_glass"
+                android:textColor="@color/text_primary"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Main App Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_apps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dock_container"
+        android:layout_below="@id/top_bar"
+        android:padding="40dp"
+        android:clipToPadding="false" />
+
+    <!-- Focused App Name Glow Area -->
+    <TextView
+        android:id="@+id/tv_focused_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/dock_container"
+        android:layout_marginBottom="20dp"
+        android:text=""
+        android:textColor="@color/text_primary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/outfit"
+        android:visibility="invisible" />
+
+    <!-- Bottom Dock -->
+    <LinearLayout
+        android:id="@+id/dock_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/dock_band_rounded"
+        android:gravity="center"
+        android:padding="20dp">
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
