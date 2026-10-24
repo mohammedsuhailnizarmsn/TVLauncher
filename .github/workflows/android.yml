@@ -18,19 +18,13 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
-    # We will use the Gradle wrapper specifically by downloading it 
-    # or letting the Action find it, but we MUST use the wrapper to 
-    # avoid the system's Gradle 9.8.1.
-    - name: Setup Gradle Wrapper
+    # Instead of calling 'gradle' or './gradlew' which the runner intercepts,
+    # we will explicitly use the Gradle Wrapper and ensure it's the only thing running.
+    - name: Build with Gradle
       run: |
-        chmod +x gradlew || true
-        # If gradlew is missing, we'll try to use the system gradle to generate it
-        # but the most reliable way is to use the provided properties.
-        
-    - name: Build with Gradle Wrapper
-      run: ./gradlew assembleDebug
+        chmod +x gradlew
+        ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
